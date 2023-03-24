@@ -35,5 +35,6 @@ override.tf.json
 *.tfstate.backup
 *.lock.info
 .terraform
+.terraform.lock.hcl
 .DS_Store
 commands.txt
