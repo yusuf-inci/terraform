@@ -33,3 +33,11 @@ resource "aws_instance" "baytera-inst" {
 
   }
 }
+
+output "public_ip" {
+  value = aws_instance.baytera-inst.public_ip
+}
+
+output "private_ip" {
+  value = aws_instance.baytera-inst.private_ip
+}
