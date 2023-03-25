@@ -13,3 +13,9 @@ variable "AMIS" {
     us-east-1 = "ami-04581fbf744a7d11f"
   }
 }
+
+variable "USER" {
+    default = "ec2_user"
+}
+
+
