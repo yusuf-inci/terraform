@@ -1,6 +1,6 @@
 resource "aws_key_pair" "baytera-key" {
-  key_name   = "baytera"
-  public_key = file("baytera.pub")
+  key_name   = "bayterakey"
+  public_key = file("bayterakey.pub")
 }
 
 resource "aws_instance" "baytera-inst" {
@@ -20,6 +20,7 @@ resource "aws_instance" "baytera-inst" {
   }
 
   provisioner "remote-exec" {
+    
     inline = [
       "chmod u+x /tmp/web.sh",
       "sudo /tmp/web.sh"
@@ -28,7 +29,7 @@ resource "aws_instance" "baytera-inst" {
 
   connection {
     user        = var.USER
-    private_key = file("baytera")
+    private_key = file("bayterakey")
     host        = self.public_ip
 
   }
