@@ -6,8 +6,8 @@ variable "ZONE1" {
   default = "us-east-2a"
 }
 
-variable AMIS {
-  type = map
+variable "AMIS" {
+  type = map(any)
   default = {
     us-east-2 = "ami-0533def491c57d991"
     us-east-1 = "ami-04581fbf744a7d11f"
@@ -15,7 +15,7 @@ variable AMIS {
 }
 
 variable "USER" {
-  default = "ec2_user"
+  default = "ec2-user"
 }
 
 

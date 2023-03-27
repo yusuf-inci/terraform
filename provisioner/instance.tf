@@ -1,13 +1,13 @@
-resource "aws_key_pair" "baytera-key" {
-  key_name   = "bayterakey"
-  public_key = file("bayterakey.pub")
+resource "aws_key_pair" "bay-key" {
+  key_name   = "baykey"
+  public_key = file("baykey.pub")
 }
 
 resource "aws_instance" "baytera-inst" {
   ami                    = var.AMIS[var.REGION]
   instance_type          = "t2.micro"
   availability_zone      = var.ZONE1
-  key_name               = aws_key_pair.baytera-key.key_name
+  key_name               = aws_key_pair.bay-key.key_name
   vpc_security_group_ids = ["sg-0a5f5e49e1215fa97"]
   tags = {
     Name    = "Baytera-Instance"
@@ -20,7 +20,7 @@ resource "aws_instance" "baytera-inst" {
   }
 
   provisioner "remote-exec" {
-    
+
     inline = [
       "chmod u+x /tmp/web.sh",
       "sudo /tmp/web.sh"
@@ -29,7 +29,7 @@ resource "aws_instance" "baytera-inst" {
 
   connection {
     user        = var.USER
-    private_key = file("bayterakey")
+    private_key = file("baykey")
     host        = self.public_ip
 
   }
