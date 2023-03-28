@@ -80,7 +80,7 @@ resource "aws_internet_gateway" "baytera-IGW" {
 resource "aws_route_table" "baytera-pub-RT" {
     vpc_id = aws_vpc.baytera.id
 
-    route = {
+    route {
       cidr_block = "0.0.0.0/0"
       gateway_id = aws_internet_gateway.baytera-IGW.id
     }
