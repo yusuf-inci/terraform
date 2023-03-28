@@ -33,3 +33,7 @@ variable "PUB_KEY" {
 variable "PRIV_KEY" {
   default = "baykey"
 }
+
+variable "MYIP" {
+  default = "78.170.81.8/32"
+}
