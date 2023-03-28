@@ -27,9 +27,9 @@ variable "USER" {
 }
 
 variable "PUB_KEY" {
-    default = "baykey.pub"
+  default = "baykey.pub"
 }
 
 variable "PRIV_KEY" {
-    default = "baykey"
+  default = "baykey"
 }
