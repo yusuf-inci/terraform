@@ -40,3 +40,4 @@ override.tf.json
 commands.txt
 baykey
 baykey.pub
+kplabs-terraform/
