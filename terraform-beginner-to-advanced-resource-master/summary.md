@@ -58,8 +58,8 @@ Step 2. Write the terraform script.
     # Configure the AWS Provider
     provider "aws" {
       region = "us-east-1"
-      access_key = "AKIA6MTOAS67E44UU65R"
-      secret_key = "Z+8MX86XSCIi1oT41dyJbFSukfZsyZOgRyiLdTxE"
+      access_key = "PUT-YOUR-ACCESS-KEY-HERE"
+      secret_key = "PUT-YOUR-ACCESS-KEY-HERE"
     }
 
     resource "aws_instance" "MyAutomatedEC2" {               # aws_instance Provides an EC2 instance resource.
