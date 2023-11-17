@@ -366,8 +366,8 @@ Eg 1. Create an elastic IP  --> Create an EC2 instance --> Allocate the elastic 
 ------------------------------------------------------------------------------------------------------
 provider "aws" {
   region = "us-east-1"
-  access_key = "AKIA6MTOAS67E44UU65R"
-  secret_key = "Z+8MX86XSCIi1oT41dyJbFSukfZsyZOgRyiLdTxE"
+  access_key = "PUT-YOUR-ACCESS-KEY-HERE"
+  secret_key = "PUT-YOUR-ACCESS-KEY-HERE"
 }
 
 # Creating EC2 Instance.
@@ -405,8 +405,8 @@ terraform {
 
 provider "aws" {
   region = "us-east-1"
-  access_key = "AKIA6MTOAS67E44UU65R"
-  secret_key = "Z+8MX86XSCIi1oT41dyJbFSukfZsyZOgRyiLdTxE"
+  access_key = "PUT-YOUR-ACCESS-KEY-HERE"
+  secret_key = "PUT-YOUR-ACCESS-KEY-HERE"
 }
 
 # Creating EC2 Instance.
@@ -2114,8 +2114,8 @@ So for this we create 3 terraform script.
         bucket         = "terraform-remote-backend-storage"
         key            = "eip.tfstate"                              # name of .tfstate file.
         region         = "us-east-1"
-        access_key     = "AKIA6MTOAS67E44UU65R"
-        secret_key     = "Z+8MX86XSCIi1oT41dyJbFSukfZsyZOgRyiLdTxE"
+        access_key     = "PUT-YOUR-ACCESS-KEY-HERE"
+        secret_key     = "PUT-YOUR-ACCESS-KEY-HERE"
       }
     }
 
@@ -2204,8 +2204,8 @@ Now create the following three terraform script.
         bucket         = "terraform-remote-backend-storage"         # S3 BUCKET NAME
         key            = "eip.tfstate"                              # NAME OF .tfstate FILE CREATED IN S3 BUCKET.
         region         = "us-east-1"
-        access_key     = "AKIA6MTOAS67E44UU65R"
-        secret_key     = "Z+8MX86XSCIi1oT41dyJbFSukfZsyZOgRyiLdTxE"
+        access_key     = "PUT-YOUR-ACCESS-KEY-HERE"
+        secret_key     = "PUT-YOUR-ACCESS-KEY-HERE"
         dynamodb_table = "terraform_remote_backend_state_lock"      # NAME OF THE DYNAMO DB TABLE
       }
     }
